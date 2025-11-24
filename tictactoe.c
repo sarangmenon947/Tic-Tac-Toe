@@ -21,12 +21,10 @@ void printBoard() {
 
 int isWin() {
     for (int i = 0; i < 3; i++) {
-        // Check rows and columns
         if ((board[i][0] == currentPlayer && board[i][1] == currentPlayer && board[i][2] == currentPlayer) ||
             (board[0][i] == currentPlayer && board[1][i] == currentPlayer && board[2][i] == currentPlayer))
             return 1;
     }
-    // Check diagonals
     if ((board[0][0] == currentPlayer && board[1][1] == currentPlayer && board[2][2] == currentPlayer) ||
         (board[0][2] == currentPlayer && board[1][1] == currentPlayer && board[2][0] == currentPlayer))
         return 1;
@@ -54,7 +52,7 @@ void playGame() {
         printf("Player %c, enter your move (row and column: 1-3 1-3): ", currentPlayer);
         scanf("%d %d", &row, &col);
 
-        row--; col--; // Adjust to 0-based indexing
+        row--; col--; 
 
         if (row < 0 || row >= 3 || col < 0 || col >= 3) {
             printf("Invalid move. Please enter values between 1 and 3.\n");
@@ -88,4 +86,5 @@ int main() {
     initializeBoard();
     playGame();
     return 0;
+
 }
