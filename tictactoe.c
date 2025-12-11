@@ -1,4 +1,4 @@
-# include <stdio.h>
+#include <stdio.h>
 
 char board[3][3];
 char currentPlayer = 'X';
@@ -86,5 +86,5 @@ int main() {
     initializeBoard();
     playGame();
     return 0;
-
 }
+
