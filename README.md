@@ -95,9 +95,3 @@ Positions are addressed by (row, column) — for example, the centre cell is `2 
 
 Player X wins!
 ```
-
----
-
-## License
-
-This project is released into the public domain. Feel free to use, modify, and distribute it.
